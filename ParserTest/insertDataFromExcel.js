@@ -37,4 +37,14 @@ fs.writeFileSync('./ParserTest/output.json', substring, function (err) {
 });
 
 let objectD = JSON.parse(substring);
+objectD.definitions.forEach(card => {
+  for (property in card)
+  {
+    if (card[property].name == 'Card-dummy')
+    {
+      console.log(card);
+    }
+  }
+});
+
 console.log('End');
