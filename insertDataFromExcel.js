@@ -38,14 +38,11 @@ fs.writeFileSync('output.json', substring, function (err) {
 
 let objectD = JSON.parse(substring);
 
-
-
 const getCardChildren = () => {
   let children;
   objectD.definitions.forEach(card => {
     if (card.data != undefined && card.data.name == '/Card-dummy')
     {
-      // console.log(card);
       children = card.children;        
     }
   });  
@@ -53,6 +50,41 @@ const getCardChildren = () => {
 }
 
 let cardChildren = getCardChildren();
+let enFileContent = fs.readFileSync("en.txt");
+let enFileAsArray = enFileContent.toString().split(/\n/);
+
+const replaceTextInEnFile = (itemText) => {
+  for (i = 0; i < enFileAsArray.length; i++)
+  {
+    if (enFileAsArray[i].includes(itemText))
+    {
+      enFileAsArray[i] = enFileAsArray[i].replace('TextToReplace', 'Guy!');
+    }
+  }
+};
+
+cardChildren.forEach((child) => {
+  if (child.includes('HTMLText'))
+  {
+    let titleText = child.replace('this.', '');
+    replaceTextInEnFile(titleText);
+  }
+  else if (child.includes('Label_76E0532B'))
+  {
+    let subTitleText = child.replace('this.', '');
+    replaceTextInEnFile(subTitleText);
+  }
+});
+
+let updatedEnFileContent;
+enFileAsArray.forEach(line => {
+  updatedEnFileContent += line;
+});
+
+fs.writeFileSync('newEn.txt', updatedEnFileContent, function (err) {
+  if (err) throw err;
+  console.log('Saved nwe en.txt file');
+});
 
 console.log(cardChildren);
 console.log('End');
