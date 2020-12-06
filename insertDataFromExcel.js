@@ -41,7 +41,7 @@ let objectD = JSON.parse(substring);
 const getCardChildren = () => {
   let children;
   objectD.definitions.forEach(card => {
-    if (card.data != undefined && card.data.name == '/Card-dummy')
+    if (card.data != undefined && card.data.name == '/1009')
     {
       children = card.children;        
     }
@@ -69,7 +69,7 @@ cardChildren.forEach((child) => {
     let titleText = child.replace('this.', '');
     replaceTextInEnFile(titleText);
   }
-  else if (child.includes('Label_76E0532B'))
+  else if (child.includes('Label_2FAB3382'))
   {
     let subTitleText = child.replace('this.', '');
     replaceTextInEnFile(subTitleText);
