@@ -6,7 +6,8 @@ let shouldDeleteLine = false;
 content.toString().split(/\n/).forEach(function(line){
     if (line.includes('trans('))
     {
-        line = '\n';
+        line = line.replace('trans(', '"trans(');
+        line = line.replace(')', ')"');
     }
     else if (line.includes('"this."'))
     {
