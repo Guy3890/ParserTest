@@ -33,7 +33,7 @@ updateEnFile();
 
 function parseFileToObject() {
   let fileContent = fs.readFileSync("script_mobile.js");  
-  const substring = fileContent.toString().substring(fileContent.indexOf('var d = {') + 8, fileContent.lastIndexOf("if (d['data'] == undefined)") - 7);  
+  const substring = fileContent.toString().substring(fileContent.indexOf('var b = {') + 8, fileContent.lastIndexOf("if (b['data'] == undefined)") - 7);  
   let beautifyContent = beautify(substring, { indent_size: 4, space_in_empty_paren: true });
 
   let trimmedContent = ""; 
@@ -70,9 +70,9 @@ function parseFileToObject() {
   //   if (err) throw err;
   //  });
 
-  // fs.writeFileSync('parseableObjectD.json', trimmedContent, function (err) {
-  //   if (err) throw err;
-  //  });
+  fs.writeFileSync('parseableObjectD.json', trimmedContent, function (err) {
+    if (err) throw err;
+   });
 
   return JSON.parse(trimmedContent);
 }
