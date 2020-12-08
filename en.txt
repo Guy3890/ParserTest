@@ -59,14 +59,13 @@ Button_B0570FFB_A6F1_79DC_41C1_CCE5EBB9CBF2.label = Deck
 Button_B0570FFB_A6F1_79DC_41C1_CCE5EBB9CBF2.pressedLabel = Deck
 
 ### Multiline Text
-HTMLText_267CB353_288D_98B8_41A3_1F1FFA4D2A72_mobile.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#cccccc;font-size:12px;font-family:'Microsoft Tai Le';"><B> </B></SPAN></SPAN></DIV></div>
-HTMLText_267DD4B0_288D_99F7_41BD_610BCA5D7FE9_mobile.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#cccccc;font-size:12px;font-family:'Microsoft Tai Le';"><B> </B></SPAN></SPAN></DIV></div>
-HTMLText_27FBD195_288D_9BB9_41C2_761C15F1C27F_mobile.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#cccccc;font-size:12px;font-family:'Microsoft Tai Le';"><B> </B></SPAN></SPAN></DIV></div>
 HTMLText_2FAA9383_3BEC_DE3C_41B0_35B87EA50F11.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#cccccc;font-size:12px;font-family:'Microsoft Tai Le';">Marine Diesel Generato 8000i PMS 230V, 50Hz, 6.4kW / 8.0kVA </SPAN></SPAN></DIV></div>
 HTMLText_2FAA9383_3BEC_DE3C_41B0_35B87EA50F11_mobile.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#cccccc;font-size:12px;font-family:'Montserrat';">Marine Diesel Generato 8000i PMS 230V, 50Hz, 6.4kW / 8.0kVA</SPAN><SPAN STYLE="color:#cccccc;font-size:12px;font-family:'Microsoft Tai Le';"><B> </B></SPAN></SPAN></DIV></div>
 HTMLText_3B610FF6_2B9F_1EB7_41C3_4D295F5B3805.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#cccccc;font-size:12px;font-family:'Microsoft Tai Le';">Volvo Penta D2-75 with saildrive and 4    blade Volvo Penta propeller</SPAN></SPAN></DIV></div>
 HTMLText_3B610FF6_2B9F_1EB7_41C3_4D295F5B3805_mobile.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#cccccc;font-size:12px;font-family:'Montserrat';">Volvo Penta D2-75 with saildrive and 4    blade Volvo Penta propeller</SPAN></SPAN></DIV></div>
-HTMLText_76E08323_6483_EE32_41CC_E9369C77351B_mobile.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#cccccc;font-size:12px;font-family:'Microsoft Tai Le';"><B>TextToReplace </B></SPAN></SPAN></DIV></div>
+HTMLText_51BE2B7A_46E1_D388_41BE_A38A54CA0CC8_mobile.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#cccccc;font-size:13px;font-family:'Microsoft Tai Le';"><B>SubTitle</B></SPAN></SPAN></DIV></div>
+HTMLText_57BA1862_46E1_DDB8_41C0_F624C9F69AB8_mobile.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#cccccc;font-size:13px;font-family:'Microsoft Tai Le';"><B>SubTitle</B></SPAN></SPAN></DIV></div>
+HTMLText_76E08323_6483_EE32_41CC_E9369C77351B_mobile.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#cccccc;font-size:13px;font-family:'Microsoft Tai Le';"><B>SubTitle</B></SPAN></SPAN></DIV></div>
 HTMLText_9D8815FD_8805_1B13_41D4_92F2CCDD396E_mobile.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#cccccc;font-size:12px;font-family:'Montserrat';">AC 115/230V ELECTRIC service PANEL</SPAN></SPAN></DIV></div>
 HTMLText_9D908A22_8805_0936_41D3_CF1ACF11D8C6_mobile.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#cccccc;font-size:12px;font-family:'Montserrat';">Cntrol display panel and indicator</SPAN><SPAN STYLE="color:#cccccc;font-size:12px;font-family:'Microsoft Tai Le';"><B>s</B></SPAN></SPAN></DIV></div>
 HTMLText_9D9CDE94_8805_0911_41D7_787D47381091_mobile.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#cccccc;font-size:12px;font-family:'Montserrat';">Flushmount compass for steering console or steering wheel pedestal</SPAN><SPAN STYLE="color:#cccccc;font-size:12px;font-family:'Microsoft Tai Le';"><B> </B></SPAN></SPAN></DIV></div>
@@ -91,24 +90,6 @@ Label_0FD9D578_04CF_73E4_41B0_5802E61E0F6F.text = Tech Tour
 Label_0FD9D578_04CF_73E4_41B0_5802E61E0F6F_mobile.text = Tech Tour
 Label_241D2EF7_2B8D_1EB5_41C1_9D10F9F80DE6.text =    Volvo Penta D2-75
 Label_241D2EF7_2B8D_1EB5_41C1_9D10F9F80DE6_mobile.text =  Volvo Penta D2-75
-Label_26780356_288D_98B8_41C2_36AFB9A66A90_mobile.text = Photo
-Label_267854B2_288D_99FB_41B2_17EBBF1D4D5E_mobile.text = Photo
-Label_2678D356_288D_98B8_41B4_56F0889459FC_mobile.text = Checklist
-Label_2678F355_288D_98B8_4194_086C15196BD4_mobile.text = Troubleshooting
-Label_2678F356_288D_98B8_41B1_7C5AA168238B_mobile.text = Video
-Label_267934B3_288D_99F9_41C0_E191BCB6CA0C_mobile.text = Video
-Label_267954B3_288D_99F9_41B1_4E09C9FFA433_mobile.text = Checklist
-Label_267AA355_288D_98B8_41BA_9C5D7F1DB489_mobile.text = User Manual
-Label_267B1355_288D_98B8_41AA_8A9480D8E085_mobile.text = Diagram
-Label_267B84B1_288D_99F9_41BF_3DE2BE17A4AC_mobile.text = User Manual
-Label_267BB4B2_288D_99FB_418A_E4FC9CD47DA8_mobile.text = Troubleshooting
-Label_267BD4B2_288D_99FB_41AE_E684EA409B59_mobile.text = Diagram
-Label_27F66198_288D_9BB7_41B9_FCC4A5E607F5_mobile.text = Photo
-Label_27F73199_288D_9BA9_41B0_74A4CED34344_mobile.text = Checklist
-Label_27F74198_288D_9BB7_419E_8F46DE77085C_mobile.text = Video
-Label_27F90197_288D_9BB9_4181_B013CC6DE3FC_mobile.text = User Manual
-Label_27F93198_288D_9BB7_41BA_87385E1D0686_mobile.text = Troubleshooting
-Label_27F95198_288D_9BB7_41BF_8866A98CA2FC_mobile.text = Diagram
 Label_2F82D398_3BEC_DE4C_4181_E36BC0C4119D.text = Diagram
 Label_2F82D398_3BEC_DE4C_4181_E36BC0C4119D_mobile.text = Diagram
 Label_2F830397_3BEC_DE44_4199_497C428FBC16.text = User Manual
@@ -122,7 +103,7 @@ Label_2F8D1399_3BEC_DE4C_41C3_0943532FD1F3_mobile.text = Photo
 Label_2F8DE398_3BEC_DE4C_41C5_AE5AFBA54146.text = Troubleshooting
 Label_2F8DE398_3BEC_DE4C_41C5_AE5AFBA54146_mobile.text = Troubleshooting
 Label_2FAB3382_3BEC_DE3C_41BA_039C62A82ADF.text =  Fischer panda 8000i pms
-Label_2FAB3382_3BEC_DE3C_41BA_039C62A82ADF_mobile.text =  TextToReplace
+Label_2FAB3382_3BEC_DE3C_41BA_039C62A82ADF_mobile.text =  Fischer panda 8000i pms
 Label_39A268DB_2B85_02FD_41C5_10055E8BAE47.text = Photo
 Label_39A268DB_2B85_02FD_41C5_10055E8BAE47_mobile.text = Photo
 Label_3A0EF6F3_2BBD_0ECD_41A1_4E5918903CB5.text = Diagram
@@ -135,12 +116,27 @@ Label_3ACA647E_2B85_01B4_41C1_17B661644E9E.text = Video
 Label_3ACA647E_2B85_01B4_41C1_17B661644E9E_mobile.text = Video
 Label_3BEC676D_2B87_0FD4_4188_4BF66EE6307E.text = User Manual
 Label_3BEC676D_2B87_0FD4_4188_4BF66EE6307E_mobile.text = User Manual
+Label_51BE0B7A_46E1_D388_41CB_7B8CBB07EB88_mobile.text = HeaderTitle
+Label_51BF0B81_46E1_D378_4177_E30DE1CD48D0_mobile.text = Photo
+Label_51BF1B82_46E1_D378_41B6_9AC05BCB43EC_mobile.text = Checklist
+Label_51BF2B81_46E1_D378_41CA_23076D6362F4_mobile.text = Video
+Label_51BF5B7F_46E1_D388_41C7_3E68B172E378_mobile.text = Diagram
+Label_51BF6B7E_46E1_D388_41C5_3461C363A448_mobile.text = User Manual
+Label_51BF7B80_46E1_D378_41C9_7ED27C28BBAC_mobile.text = Troubleshooting
+Label_57B86866_46E1_DDB8_4142_34AB09930F08_mobile.text = Diagram
+Label_57B90866_46E1_DDB8_41C0_A8F3061BB5A0_mobile.text = Troubleshooting
+Label_57B91867_46E1_DDB8_41BB_3661224892B1_mobile.text = Photo
+Label_57B93867_46E1_DDB8_41B5_24217FD9510F_mobile.text = Video
+Label_57BAB85E_46E1_DD88_41AE_3686C6B2F2EF_mobile.text = HeaderTitle
+Label_57BB1865_46E1_DDB8_41B6_2C589D3D83E9_mobile.text = User Manual
+Label_57C6D868_46E1_DD88_41C0_7F0932720C22_mobile.text = Checklist
 Label_76E0532B_6483_EE32_41C5_41DC07566212_mobile.text = User Manual
 Label_76E1232C_6483_EE36_41B7_4BBF6BB6699B_mobile.text = Troubleshooting
 Label_76E1F32C_6483_EE36_41BE_54555F7F66E5_mobile.text = Diagram
 Label_76E2432D_6483_EE36_41B7_429FCAB42F4A_mobile.text = Checklist
 Label_76E2632D_6483_EE36_41D2_625801F887E5_mobile.text = Video
 Label_76E2B32C_6483_EE36_41CF_4D9FC7A497F1_mobile.text = Photo
+Label_76EBF321_6483_EE2E_41D0_236A3720DBDC_mobile.text = HeaderTitle
 Label_9D88B60D_8805_18F3_41CF_49C4CDFEE4AA_mobile.text = User Manual
 Label_9D88D60F_8805_190F_41DD_AC54DC6F03C7_mobile.text = Photo
 Label_9D88F60E_8805_18F1_41B3_0D9E91148D1C_mobile.text = Troubleshooting
