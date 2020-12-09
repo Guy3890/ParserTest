@@ -113,7 +113,7 @@ function updateChildrenInEnFile(card, children) {
     replaceTextInEnFile(childId, 'Dm', card.dmLink);
     replaceTextInEnFile(childId, 'Um', card.umLink);
     replaceTextInEnFile(childId, 'Ck', card.ckLink);
-    replaceTextInEnFile(childId, 'Photo', card.photoLink);
+    replaceTextInEnFile(childId, 'Phot', card.photoLink);
   });
 }
 
