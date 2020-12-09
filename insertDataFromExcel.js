@@ -1,34 +1,11 @@
 const fs = require("fs");
 const beautify = require('js-beautify').js;
-'use strict';
 const excelToJson = require('convert-excel-to-json');
 
-let objectD = parseFileToObject();
-let enFileContent = fs.readFileSync("en.txt");
+let cardsData = getCardsDataFromExcelFile('test.xlsx');
+let objectD = parseFileToObject('script_mobile.js');
+let enFileContent = fs.readFileSync('en.txt');
 let enFileAsArray = enFileContent.toString().split(/\n/);
-
-const result = excelToJson({
-  source: fs.readFileSync ('test.xlsx')
-});
-
-// TODO: Create this array from excel file
-cardsData = [
-  {
-    cardName: "1009",
-    headerTitle: "Volvo Penta D2-75",
-    subTitle: "Volvo Penta D2-75 with saildrive and 4 blade Volvo Penta propeller"
-  },
-  {
-    cardName: "1024",
-    headerTitle: "DC ELECTRIC PANEL",
-    subTitle: "DC 12V ELECTRIC service PANEL"
-  },
-  {
-    cardName: "1025",
-    headerTitle: "AC ELECTRIC PANEL",
-    subTitle: "AC 115/230V ELECTRIC service PANEL"
-  }
-]
 
 cardsData.forEach(card => {
   let children = getCardChildren(card.cardName);
@@ -37,8 +14,22 @@ cardsData.forEach(card => {
 
 updateEnFile();
 
-function parseFileToObject() {
-  let fileContent = fs.readFileSync("script_mobile.js");  
+function getCardsDataFromExcelFile(filePath) {
+  let cardsData = excelToJson({
+    sourceFile: filePath,
+    header: { rows: 1 },
+    columnToKey: {
+        A: "cardName",
+        B: "headerTitle",
+        C: "subTitle"        
+    }
+  })
+
+  return cardsData[Object.keys(cardsData)[0]];
+}
+
+function parseFileToObject(filePath) {
+  let fileContent = fs.readFileSync(filePath);  
   const substring = fileContent.toString().substring(fileContent.indexOf('var b = {') + 8, fileContent.lastIndexOf("if (b['data'] == undefined)") - 7);  
   let beautifyContent = beautify(substring, { indent_size: 4, space_in_empty_paren: true });
 
@@ -76,9 +67,9 @@ function parseFileToObject() {
   //   if (err) throw err;
   //  });
 
-  fs.writeFileSync('parseableObjectD.json', trimmedContent, function (err) {
-    if (err) throw err;
-   });
+  // fs.writeFileSync('parseableObjectD.json', trimmedContent, function (err) {
+  //   if (err) throw err;
+  //  });
 
   return JSON.parse(trimmedContent);
 }
