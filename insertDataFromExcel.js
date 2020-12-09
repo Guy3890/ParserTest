@@ -12,7 +12,7 @@ cardsData.forEach(card => {
   updateChildrenInEnFile(card, children);
 });
 
-updateEnFile();
+updateEnFile('newEn.txt');
 
 function getCardsDataFromExcelFile(filePath) {
   let cardsData = excelToJson({
@@ -21,7 +21,14 @@ function getCardsDataFromExcelFile(filePath) {
     columnToKey: {
         A: "cardName",
         B: "headerTitle",
-        C: "subTitle"        
+        C: "subTitle",
+        D: "youtubeLink",
+        E: "productLink",
+        F: "tsLink",
+        G: "dmLink",
+        H: "umLink",
+        I: "ckLink",
+        J: "photoLink"
     }
   })
 
@@ -99,18 +106,25 @@ function updateChildrenInEnFile(card, children) {
   children.forEach((child) => {
     let childId = child.replace('this.', '');
     replaceTextInEnFile(childId, 'HeaderTitle', card.headerTitle);
-    replaceTextInEnFile(childId, 'SubTitle', card.subTitle)
+    replaceTextInEnFile(childId, 'SubTitle', card.subTitle);
+    replaceTextInEnFile(childId, 'Vid', card.youtubeLink);
+    replaceTextInEnFile(childId, 'Product', card.productLink);
+    replaceTextInEnFile(childId, 'Ts', card.tsLink);
+    replaceTextInEnFile(childId, 'Dm', card.dmLink);
+    replaceTextInEnFile(childId, 'Um', card.umLink);
+    replaceTextInEnFile(childId, 'Ck', card.ckLink);
+    replaceTextInEnFile(childId, 'Photo', card.photoLink);
   });
 }
 
 
-function updateEnFile() {
+function updateEnFile(filePath) {
   let updatedEnFileContent;
   enFileAsArray.forEach(line => {
     updatedEnFileContent += line;
   });
 
-  fs.writeFileSync('newEn.txt', updatedEnFileContent, function (err) {
+  fs.writeFileSync(filePath, updatedEnFileContent, function (err) {
     if (err) throw err;
   });
 }
