@@ -107,13 +107,13 @@ function updateChildrenInEnFile(card, children) {
     let childId = child.replace('this.', '');
     replaceTextInEnFile(childId, 'HeaderTitle', card.headerTitle);
     replaceTextInEnFile(childId, 'SubTitle', card.subTitle);
-    replaceTextInEnFile(childId, 'Vid', card.youtubeLink);
+    replaceTextInEnFile(childId, 'Youtube', card.youtubeLink);
     replaceTextInEnFile(childId, 'Product', card.productLink);
     replaceTextInEnFile(childId, 'Ts', card.tsLink);
     replaceTextInEnFile(childId, 'Dm', card.dmLink);
     replaceTextInEnFile(childId, 'Um', card.umLink);
     replaceTextInEnFile(childId, 'Ck', card.ckLink);
-    replaceTextInEnFile(childId, 'Phot', card.photoLink);
+    replaceTextInEnFile(childId, 'Pic', card.photoLink);
   });
 }
 
