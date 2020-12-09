@@ -1,9 +1,15 @@
 const fs = require("fs");
 const beautify = require('js-beautify').js;
+'use strict';
+const excelToJson = require('convert-excel-to-json');
 
 let objectD = parseFileToObject();
 let enFileContent = fs.readFileSync("en.txt");
 let enFileAsArray = enFileContent.toString().split(/\n/);
+
+const result = excelToJson({
+  source: fs.readFileSync ('test.xlsx')
+});
 
 // TODO: Create this array from excel file
 cardsData = [
@@ -119,3 +125,4 @@ function updateEnFile() {
 }
 
 console.log('End');
+
