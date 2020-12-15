@@ -10,6 +10,7 @@ let enFileAsArray = enFileContent.toString().split(/\n/);
 cardsData.forEach(card => {
   let children = getCardChildren(card.cardName);
   updateChildrenInEnFile(card, children);
+  changeButtonsStatus(card, children);
 });
 
 updateEnFile('newEn.txt');
@@ -155,8 +156,15 @@ function updateChildrenInEnFile(card, children) {
   });
 }
 
-// let childObject = getChildObject(childId);
-// if (childObject != undefined && childObject.data != undefined) {
+function changeButtonsStatus(card, children) {
+  if (card.youtubeLink == undefined) {
+    let childObject = getChildObject();
+    if (childObject != undefined && childObject.data != undefined) {
+
+    }
+  }
+}
+
 
 function getIconButtonId(childId, prefixIndication) {
   let childObject = getChildObject(childId);
@@ -193,4 +201,3 @@ function updateEnFile(filePath) {
 }
 
 console.log('End');
-
