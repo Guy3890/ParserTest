@@ -1497,7 +1497,7 @@
                 "name": "digaram grey"
             },
             "paddingTop": 0,
-            "visible": false,
+            "visible": true,
             "scaleMode": "fit_inside",
             "paddingBottom": 0
         }, {
@@ -2042,6 +2042,7 @@
             "click": "this.WebFrame_74B030C7_65E2_4EBE_41D7_DF0F357118AA.set('url', this.translate('PopupWebFrameBehaviour_4A73DEF2_5E72_16D7_41D4_9D925F73C9B4.url')); this.showWindow(this.window_51D36C20_42F4_1B05_41A5_70A0294258EE, null, false)",
             "transparencyActive": true,
             "shadow": false,
+            "visible": false,
             "propagateClick": false,
             "data": {
                 "name": "ts"
@@ -4115,7 +4116,7 @@
                 "name": "ts-grey"
             },
             "paddingTop": 0,
-            "visible": false,
+            "visible": true,
             "scaleMode": "fit_inside",
             "paddingBottom": 0
         }, {

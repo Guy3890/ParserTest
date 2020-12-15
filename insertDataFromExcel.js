@@ -37,7 +37,7 @@ function getCardsDataFromExcelFile(filePath) {
 
 function parseFileToObject(filePath) {
   let fileContent = fs.readFileSync(filePath);  
-  const substring = fileContent.toString().substring(fileContent.indexOf('var b = {') + 8, fileContent.lastIndexOf("if (b['data'] == undefined)") - 7);  
+  const substring = fileContent.toString().substring(fileContent.indexOf('var d = {') + 8, fileContent.lastIndexOf("if (d['data'] == undefined)") - 7);  
   let beautifyContent = beautify(substring, { indent_size: 4, space_in_empty_paren: true });
 
   let trimmedContent = ""; 
@@ -59,7 +59,7 @@ function parseFileToObject(filePath) {
       }
       else if (shouldDeleteLine)
       {
-        if (line === '    },')
+        if (line.includes('},'))
         {        
           shouldDeleteLine = false;
         }
@@ -70,13 +70,13 @@ function parseFileToObject(filePath) {
 
   // For Debug:
 
-  // fs.writeFileSync('beautyObjectD.json', beautifyContent, function (err) {
-  //   if (err) throw err;
-  //  });
+  fs.writeFileSync('beautyObjectD.json', beautifyContent, function (err) {
+    if (err) throw err;
+   });
 
-  // fs.writeFileSync('parseableObjectD.json', trimmedContent, function (err) {
-  //   if (err) throw err;
-  //  });
+  fs.writeFileSync('parseableObjectD.json', trimmedContent, function (err) {
+    if (err) throw err;
+   });
 
   return JSON.parse(trimmedContent);
 }
@@ -86,35 +86,98 @@ function getCardChildren(cardName) {
   objectD.definitions.forEach(card => {
     if (card.data != undefined && card.data.name == '/' + cardName)
     {
-      children = card.children;        
+      children = card.children;  
     }
   });  
   return children;
 }
 
-function replaceTextInEnFile(childId, titleToReplace, itemText) {
-  for (i = 0; i < enFileAsArray.length; i++)
-  {
-    if (enFileAsArray[i].includes(childId))
+function getChildObject(childId) {
+  let childObject;
+  objectD.definitions.forEach(object => {
+    if (object.id != undefined && object.id == childId)
     {
-      enFileAsArray[i] = enFileAsArray[i].replace(titleToReplace, itemText);
+      childObject = object;       
     }
+  });  
+  return childObject;
+}
+
+function replaceTextInEnFile(childId, titleToReplace, itemText) {
+  if (itemText != undefined) {
+    for (i = 0; i < enFileAsArray.length; i++)
+    {
+      if (enFileAsArray[i].includes(childId))
+      {
+        enFileAsArray[i] = enFileAsArray[i].replace(titleToReplace, itemText);
+        return true;
+      }
+    }      
   }
+  
+  return false;
 };
 
 function updateChildrenInEnFile(card, children) {
   children.forEach((child) => {
     let childId = child.replace('this.', '');
-    replaceTextInEnFile(childId, 'HeaderTitle', card.headerTitle);
-    replaceTextInEnFile(childId, 'SubTitle', card.subTitle);
-    replaceTextInEnFile(childId, 'Youtube', card.youtubeLink);
-    replaceTextInEnFile(childId, 'Product', card.productLink);
-    replaceTextInEnFile(childId, 'Ts', card.tsLink);
-    replaceTextInEnFile(childId, 'Dm', card.dmLink);
-    replaceTextInEnFile(childId, 'Um', card.umLink);
-    replaceTextInEnFile(childId, 'Ck', card.ckLink);
-    replaceTextInEnFile(childId, 'Pic', card.photoLink);
+    let foundId = false;
+    if (childId.includes("Label_"))
+    {
+      foundId = replaceTextInEnFile(childId, 'HeaderTitle', card.headerTitle);
+      if (foundId) {
+        let iconButtonId = getLinkId(childId, 'LinkBehaviour');
+        if (iconButtonId != '')
+        {
+          foundId = replaceTextInEnFile(iconButtonId, 'Product', card.productLink);
+        }   
+      }
+    }
+
+    foundId = replaceTextInEnFile(childId, 'SubTitle', card.subTitle);
+    if (foundId) {
+      return; 
+    }
+
+    if (childId.includes("IconButton_"))
+    {
+      let iconButtonId = getIconButtonId(childId, 'PopupWebFrameBehaviour');
+      if (iconButtonId != '')
+      {
+        replaceTextInEnFile(iconButtonId, 'Youtube', card.youtubeLink);
+        replaceTextInEnFile(iconButtonId, 'Ts', card.tsLink);
+        replaceTextInEnFile(iconButtonId, 'Dm', card.dmLink);
+        replaceTextInEnFile(iconButtonId, 'Um', card.umLink);
+        replaceTextInEnFile(iconButtonId, 'Ck', card.ckLink);
+        replaceTextInEnFile(iconButtonId, 'Pic', card.photoLink);
+      }  
+    }  
   });
+}
+
+// let childObject = getChildObject(childId);
+// if (childObject != undefined && childObject.data != undefined) {
+
+function getIconButtonId(childId, prefixIndication) {
+  let childObject = getChildObject(childId);
+  if (childObject.click != undefined)
+  {
+    let clickString = childObject.click;
+    let imageButtonId = clickString.substring(clickString.indexOf(prefixIndication), clickString.indexOf('));') - 1);
+    return imageButtonId;
+  }
+  return '';
+}
+
+function getLinkId(childId, prefixIndication) {
+  let childObject = getChildObject(childId);
+  if (childObject.click != undefined)
+  {
+    let clickString = childObject.click;
+    let imageButtonId = clickString.substring(clickString.indexOf(prefixIndication), clickString.indexOf('),') - 1);
+    return imageButtonId;
+  }
+  return '';
 }
 
 
