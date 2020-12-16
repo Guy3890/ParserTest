@@ -3,17 +3,28 @@ const beautify = require('js-beautify').js;
 const excelToJson = require('convert-excel-to-json');
 
 let cardsData = getCardsDataFromExcelFile('test.xlsx');
-let objectD = parseFileToObject('script_mobile.js');
+let scriptFileContent = getScriptFileContent('script_mobile.js');
+let objectD
+parseSuccesfull = false;
+const lettersArray = ['a', 'b', 'c', 'd'];
+for (let i = 0; i < lettersArray.length; i++) {
+  try {
+    objectD = parseFileContentToObject(scriptFileContent, lettersArray[i]);
+    break;
+  } catch {
+  }
+}
+ 
 let enFileContent = fs.readFileSync('en.txt');
 let enFileAsArray = enFileContent.toString().split(/\n/);
 
 cardsData.forEach(card => {
   let children = getCardChildren(card.cardName);
   updateChildrenInEnFile(card, children);
-  changeButtonsStatus(card, children);
 });
 
 updateEnFile('newEn.txt');
+updateScript_mobileFile('newScript_mobile.js');
 
 function getCardsDataFromExcelFile(filePath) {
   let cardsData = excelToJson({
@@ -36,9 +47,14 @@ function getCardsDataFromExcelFile(filePath) {
   return cardsData[Object.keys(cardsData)[0]];
 }
 
-function parseFileToObject(filePath) {
-  let fileContent = fs.readFileSync(filePath);  
-  const substring = fileContent.toString().substring(fileContent.indexOf('var d = {') + 8, fileContent.lastIndexOf("if (d['data'] == undefined)") - 7);  
+function getScriptFileContent(filePath) {
+  return fs.readFileSync(filePath).toString();  
+}
+
+function parseFileContentToObject(fileContent, objectLetter) {
+  let string = 'var ' + objectLetter + ' = {';
+  let string2 = 'if (' + objectLetter + "['data'] == undefined)";
+  const substring = fileContent.substring(fileContent.indexOf('var ' + objectLetter + ' = {') + 8, fileContent.lastIndexOf('if (' + objectLetter + "['data'] == undefined)") - 7);  
   let beautifyContent = beautify(substring, { indent_size: 4, space_in_empty_paren: true });
 
   let trimmedContent = ""; 
@@ -145,24 +161,53 @@ function updateChildrenInEnFile(card, children) {
       let iconButtonId = getIconButtonId(childId, 'PopupWebFrameBehaviour');
       if (iconButtonId != '')
       {
-        replaceTextInEnFile(iconButtonId, 'Youtube', card.youtubeLink);
+        if (card.youtubeLink != undefined) {
+          replaceTextInEnFile(iconButtonId, 'Youtube', card.youtubeLink);
+        } 
+        
         replaceTextInEnFile(iconButtonId, 'Ts', card.tsLink);
         replaceTextInEnFile(iconButtonId, 'Dm', card.dmLink);
         replaceTextInEnFile(iconButtonId, 'Um', card.umLink);
         replaceTextInEnFile(iconButtonId, 'Ck', card.ckLink);
         replaceTextInEnFile(iconButtonId, 'Pic', card.photoLink);
       }  
-    }  
+    }
+    
+    if (childId.includes("Image_"))
+    {
+      if (card.youtubeLink == undefined) {
+        changeVisibilty(childId, 'video-grey');
+      }
+      if (card.tsLink == undefined) {
+        changeVisibilty(childId, 'ts-grey');
+      }
+      if (card.dmLink == undefined) {
+        changeVisibilty(childId, 'diagram-grey');
+      }
+      if (card.umLink == undefined) {
+        changeVisibilty(childId, 'um-grey');
+      }
+      if (card.ckLink == undefined) {
+        changeVisibilty(childId, 'checklist-grey');
+      }
+      if (card.photoLink == undefined) {
+        changeVisibilty(childId, 'photo-grey');
+      }
+    }
   });
 }
 
-function changeButtonsStatus(card, children) {
-  if (card.youtubeLink == undefined) {
-    let childObject = getChildObject();
-    if (childObject != undefined && childObject.data != undefined) {
-
-    }
+function changeVisibilty(childId, imageName) {
+  let childObject = getChildObject(childId);
+  if (childObject != undefined && childObject.data != undefined && childObject.data.name == imageName) {
+    childIndex = scriptFileContent.lastIndexOf(childId);
+    visibleIndex = scriptFileContent.indexOf('"visible"', childIndex);
+    scriptFileContent = replaceAt(visibleIndex, '"visible": true,');          
   }
+}
+
+function replaceAt(index, replacement) {
+  return scriptFileContent.substring(0, index) + replacement + scriptFileContent.substring(index + replacement.length);
 }
 
 
@@ -196,6 +241,12 @@ function updateEnFile(filePath) {
   });
 
   fs.writeFileSync(filePath, updatedEnFileContent, function (err) {
+    if (err) throw err;
+  });
+}
+
+function updateScript_mobileFile(filePath) {
+  fs.writeFileSync(filePath, scriptFileContent, function (err) {
     if (err) throw err;
   });
 }
