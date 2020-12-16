@@ -200,13 +200,20 @@ function updateChildrenInEnFile(card, children) {
 function changeVisibilty(childId, imageName) {
   let childObject = getChildObject(childId);
   if (childObject != undefined && childObject.data != undefined && childObject.data.name == imageName) {
-    childIndex = scriptFileContent.lastIndexOf(childId);
+    
+    childIndex = scriptFileContent.lastIndexOf(childId);    
+    let substring = scriptFileContent.substring(childIndex - 7, childIndex);
+    if (substring.includes('this')) {
+      childIndex = scriptFileContent.indexOf(childId);
+    }
     visibleIndex = scriptFileContent.indexOf('"visible"', childIndex);
     scriptFileContent = replaceAt(visibleIndex, '"visible": true,');          
   }
 }
 
 function replaceAt(index, replacement) {
+  let substring = scriptFileContent.substring(index - 50, index + 50);
+  console.log(substring);
   return scriptFileContent.substring(0, index) + replacement + scriptFileContent.substring(index + replacement.length);
 }
 
