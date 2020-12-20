@@ -29,6 +29,7 @@ updateScript_mobileFile('newScript_mobile.js');
 function getCardsDataFromExcelFile(filePath) {
   let cardsData = excelToJson({
     sourceFile: filePath,
+    name: 'Sheet1',
     header: { rows: 1 },
     columnToKey: {
         A: "cardName",
@@ -41,6 +42,13 @@ function getCardsDataFromExcelFile(filePath) {
         H: "umLink",
         I: "ckLink",
         J: "photoLink"
+    },
+    name: 'Sheet2',
+    header:{ rows: 1},
+    columnToKey: {
+      A: "List",
+      B: "Name",
+      C: "Link"
     }
   })
 
