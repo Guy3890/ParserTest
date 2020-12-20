@@ -14,49 +14,49 @@ Button_5005E8AC_453C_3B1D_41AD_77A897357DBA.label = Deck
 Button_5005E8AC_453C_3B1D_41AD_77A897357DBA.pressedLabel = Deck
 Button_507AE10F_4534_0D1B_41D0_E5C833E5B151.label = Cabin
 Button_507AE10F_4534_0D1B_41D0_E5C833E5B151.pressedLabel = Cabin
-Button_620F91DA_72FD_497F_41D1_B622C8928DF1.label = DC & AC Panel
-Button_6211B626_72FD_4AD7_41CC_C237E840D301.label = Fresh Water Tank STB
-Button_6218854F_72FD_4955_41B8_934736ED4A97.label = Auto Pilot Motor
-Button_621A1107_72FD_46D5_41BB_4A8FF5E0CEA1.label = Coachroof rope clutch
-Button_623DEFCB_72FD_B95C_41CF_9944CED07F09.label = Chart Table
-Button_631F1DC7_72FD_B954_41AE_67075C82D55F.label = Bow Thruster Battery & Charger
-Button_635DA55A_72FD_497F_41CC_21506FC7A21F.label = Fresh Water Tank Fw
-Button_635FD5A0_72FD_49CB_41D7_9F30861D4850.label = Bow Thruster
-Button_638AF49F_72FD_4FF5_41DB_1B805F996FE5.label = Fresh Water Manifold & Pump
-Button_638BF3F8_72FD_493B_41D2_F87A66AE2169.label = Bilge & A/C pump
-Button_63B74253_72FD_4B4D_41DC_3F0109C619C7.label = BBQ
-Button_63B903EB_72FD_495D_41D6_2E5F2B786C19.label = Freezer
-Button_63D41090_72FD_47CB_41D4_1424F293E8F6.label = Batteries Charger & Main Breker locker
-Button_63DF933F_72FD_4935_41D5_CA074A090B66.label = Engine Main Switch
-Button_63F29283_72FD_4BCC_41C8_B30AB0D5BEA4.label = Engine
-Button_7DE5B1B0_72F5_49CB_41D0_5E67E587B29A.label = Anchor
-Button_7DE631B0_72F5_49CB_41CB_8E61A3437078.label = A/C Unit Saloon
-Button_7DE671B0_72F5_49CB_41D3_1027A77D1539.label = A/C water pump inlet+ Stainer
-Button_7DE681AF_72F5_49D5_41B9_87479A008EA4.label = A/C Unit Fw. Cabin
+Button_620F91DA_72FD_497F_41D1_B622C8928DF1.label = TextToReplace
+Button_6211B626_72FD_4AD7_41CC_C237E840D301.label = TextToReplace
+Button_6218854F_72FD_4955_41B8_934736ED4A97.label = TextToReplace
+Button_621A1107_72FD_46D5_41BB_4A8FF5E0CEA1.label = TextToReplace
+Button_623DEFCB_72FD_B95C_41CF_9944CED07F09.label = TextToReplace
+Button_631F1DC7_72FD_B954_41AE_67075C82D55F.label = TextToReplace
+Button_635DA55A_72FD_497F_41CC_21506FC7A21F.label = TextToReplace
+Button_635FD5A0_72FD_49CB_41D7_9F30861D4850.label = TextToReplace
+Button_638AF49F_72FD_4FF5_41DB_1B805F996FE5.label = TextToReplace
+Button_638BF3F8_72FD_493B_41D2_F87A66AE2169.label = TextToReplace
+Button_63B74253_72FD_4B4D_41DC_3F0109C619C7.label = TextToReplace
+Button_63B903EB_72FD_495D_41D6_2E5F2B786C19.label = TextToReplace
+Button_63D41090_72FD_47CB_41D4_1424F293E8F6.label = TextToReplace
+Button_63DF933F_72FD_4935_41D5_CA074A090B66.label = TextToReplace
+Button_63F29283_72FD_4BCC_41C8_B30AB0D5BEA4.label = TextToReplace
+Button_7DE5B1B0_72F5_49CB_41D0_5E67E587B29A.label = TextToReplace
+Button_7DE631B0_72F5_49CB_41CB_8E61A3437078.label = TextToReplace
+Button_7DE671B0_72F5_49CB_41D3_1027A77D1539.label = TextToReplace
+Button_7DE681AF_72F5_49D5_41B9_87479A008EA4.label = TextToReplace
 Button_7DE681AF_72F5_49D5_41B9_87479A008EA4.pressedLabel = Inserdt Text
-Button_7DE771AF_72F5_49D5_41CC_34904BF80C18.label = A/C Panel Saloon
-Button_7DF4E1A1_72F5_49CD_41D6_B330EEA0A360.label = A/C Panel Fwd.Cabin
-Button_9501C7EE_B663_BBC0_41D8_10CC0EBF8896.label = Termal Switch winch&Gangway
-Button_95208EE4_B66D_EDC0_41E5_049238386784.label = Sail & Chain Locker
-Button_95288C35_B663_AC40_41D3_7C9ADBC4905E.label = Toilet Locker Port Aft
-Button_952B6395_B66F_5440_41DA_7524266739EB.label = Fuel Tank-Port
-Button_953E69FD_B663_B7C0_41D5_2F33E6B265B1.label = Toilet Locker Fwd
-Button_957C859A_B663_BC40_41E6_8B226942C33A.label = STB HEAD
-Button_95964088_B663_D440_41CF_FAC0F34DB9E1.label = Winch Elctric Switch
-Button_95CC2E6B_B663_ACC0_41D3_195E723B5D73.label = Toilet Locker STB. Aft
-Button_95ECE21B_B66D_F440_41BC_79D2AEE52772.label = Services Battery
-Button_96036C5B_B66F_6CC0_41D6_E114D9E9431D.label = GEN LAZARET
-Button_962DBD01_B66F_6C40_41C4_BFE3C2BC71F5.label = Generator
-Button_9637ED93_B66F_6C40_41DD_9A60DCDB72F8.label = Helm & Control Station
-Button_96419A34_B66F_5440_41E6_335231668DC6.label = FWD HEAD
-Button_96526AF6_B66F_55C0_41D5_CC004289D722.label = FWD SHOWER
-Button_9679DBB2_B66F_5440_41E0_8704BBD28567.label = Galley
-Button_969362C7_B663_D5C0_41C6_C6FBBBDC36D3.label = Windless Motor &Gear
-Button_96ED3E33_B66F_6C40_41E3_BCEABAE9E201.label = Jib Roller Deck
-Button_9792DEDB_B66F_6DC0_41C6_8A173BF1295F.label = Pasarela Hudraulic & Motor Unit
-Button_97AE4697_B66F_5C40_41C0_BC66D38C3656.label = Fuel Tank-STB
-Button_97B4DF83_B66F_6C40_41A9_86F0730C1EB5.label = PORT HEAD
-Button_97BF88BD_B66F_5440_41D6_4CD1492D76EB.label = FWD Cabin
+Button_7DE771AF_72F5_49D5_41CC_34904BF80C18.label = TextToReplace
+Button_7DF4E1A1_72F5_49CD_41D6_B330EEA0A360.label = TextToReplace
+Button_9501C7EE_B663_BBC0_41D8_10CC0EBF8896.label = TextToReplace
+Button_95208EE4_B66D_EDC0_41E5_049238386784.label = TextToReplace
+Button_95288C35_B663_AC40_41D3_7C9ADBC4905E.label = TextToReplace
+Button_952B6395_B66F_5440_41DA_7524266739EB.label = TextToReplace
+Button_953E69FD_B663_B7C0_41D5_2F33E6B265B1.label = TextToReplace
+Button_957C859A_B663_BC40_41E6_8B226942C33A.label = TextToReplace
+Button_95964088_B663_D440_41CF_FAC0F34DB9E1.label = TextToReplace
+Button_95CC2E6B_B663_ACC0_41D3_195E723B5D73.label = TextToReplace
+Button_95ECE21B_B66D_F440_41BC_79D2AEE52772.label = TextToReplace
+Button_96036C5B_B66F_6CC0_41D6_E114D9E9431D.label = TextToReplace
+Button_962DBD01_B66F_6C40_41C4_BFE3C2BC71F5.label = TextToReplace
+Button_9637ED93_B66F_6C40_41DD_9A60DCDB72F8.label = TextToReplace
+Button_96419A34_B66F_5440_41E6_335231668DC6.label = TextToReplace
+Button_96526AF6_B66F_55C0_41D5_CC004289D722.label = TextToReplace
+Button_9679DBB2_B66F_5440_41E0_8704BBD28567.label = TextToReplace
+Button_969362C7_B663_D5C0_41C6_C6FBBBDC36D3.label = TextToReplace
+Button_96ED3E33_B66F_6C40_41E3_BCEABAE9E201.label = TextToReplace
+Button_9792DEDB_B66F_6DC0_41C6_8A173BF1295F.label = TextToReplace
+Button_97AE4697_B66F_5C40_41C0_BC66D38C3656.label = TextToReplace
+Button_97B4DF83_B66F_6C40_41A9_86F0730C1EB5.label = TextToReplace
+Button_97BF88BD_B66F_5440_41D6_4CD1492D76EB.label = TextToReplace
 
 ### Multiline Text
 HTMLText_2FAA9383_3BEC_DE3C_41B0_35B87EA50F11.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;font-size:12px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#cccccc;font-size:12px;font-family:'Microsoft Tai Le';">Marine Diesel Generato 8000i PMS 230V, 50Hz, 6.4kW / 8.0kVA </SPAN></SPAN></DIV></div>
@@ -252,6 +252,10 @@ HotspotPanoramaOverlayArea_CE8946D1_DBA1_E779_41C2_B6CA2AC605F1.toolTip = Engine
 ## Action
 
 ### URL
+LinkBehaviour_585500AB_66E2_5E31_41DE_AF28C1514114.source = UrlToReplace
+LinkBehaviour_585510AB_66E2_5E31_41C3_C989269EBBEA.source = UrlToReplace
+LinkBehaviour_5855E0AB_66E2_5E31_41C4_7C35F33D8567.source = UrlToReplace
+LinkBehaviour_5855F0AB_66E2_5E31_41AF_321BB503B476.source = UrlToReplace
 LinkBehaviour_75300B00_65E2_53B2_41A4_59AD700C6970.source = Product
 LinkBehaviour_75301B00_65E2_53B2_41D2_4EF69C19B786.source = Product
 LinkBehaviour_75302B00_65E2_53B2_41C0_75EBAABCD6FD.source = Product
@@ -260,44 +264,44 @@ LinkBehaviour_7530BB00_65E2_53B2_41D7_1A32F7BFCF00.source = Product
 LinkBehaviour_7530CB00_65E2_53B2_41D7_268C856A4CD7.source = Product
 LinkBehaviour_7530DB00_65E2_53B2_41C5_16EB831AE858.source = Product
 LinkBehaviour_7530FB00_65E2_53B2_41D3_7093990A5AD0.source = Product
-LinkBehaviour_98E6F3BC_880F_0B91_41DA_43A2CBD9EF7A.source = #media-name=masterbdtech.2&focus-overlay-name=A/C Panel Fwd.Cabin
-LinkBehaviour_E065273B_F40D_6F3C_41DB_C6EA3FCCCCB1.source = #media-name=mainhall.1.5&focus-overlay-name=Engine Main Switch
-LinkBehaviour_E065373B_F40D_6F3C_41E5_8525842C9F53.source = #media-name=mainhall1.2
-LinkBehaviour_E065E73B_F40D_6F3C_41E6_424A75DD200E.source = #media-name=mainhall.1.4
-LinkBehaviour_E1D484FD_F461_4527_41E6_1A77FA1133E8.source = #media-name=bdtch.1&focus-overlay-name=Termal Switch winch&Gangway
-LinkBehaviour_E1D4B4FD_F461_4527_41CC_DB8E08DC77A9.source = #media-name=bdtech.3
-LinkBehaviour_E1D4D4FD_F461_4527_41EA_C9E8DC3D74C4.source = #medi-name=mainhall.1.2&focus-overlay-name=Winch Elctric Switch
-LinkBehaviour_E1D564FD_F461_4527_41D0_0C98E9C62E64.source = #media-name=prow.2&focus-overlay-name=Jib Roller Deck
-LinkBehaviour_E1D574FD_F461_4527_41E1_9513ACDF4583.source = #media-name=prow.2&focus-overlay-name=Jib Roller Deck
-LinkBehaviour_E20F8C5C_F4A1_4566_41EA_E598DD1DABA6.source = #media-name=masterbd
-LinkBehaviour_E20F9C5D_F4A1_4566_41E8_4C80F0A2B449.source = #media-name=pano7.1.1
-LinkBehaviour_E3D11B14_F421_5F18_41E4_BA4610B9C355.source = #media-name=masterbdtech.2
-LinkBehaviour_E3D12B14_F421_5F18_41DB_CFC09E603BAB.source = #media-name=pano4&focus-overlay-name=Coachroof rope clutch
-LinkBehaviour_E3D14B14_F421_5F18_41C6_DDACF82AB832.source = #media-name=radio
-LinkBehaviour_E3D25B14_F421_5F18_4180_73A8B21A04BE.source = #media-name=mainhall.engine&focus-overlay-name=mainhall.engine
-LinkBehaviour_E3D29B14_F421_5F18_41E9_B4FF242614F6.source = #media-name=radio&focus-overlay-name=Chart Table
-LinkBehaviour_E3D2AB14_F421_5F18_41E3_B3891776E912.source = #media-name=prow.4&focus-overlay-name=Bow Thruster
-LinkBehaviour_E3D2FB14_F421_5F18_41B3_7455DFDC9133.source = #media-name=masterbdtech.2&focus-overlay-name=Bow Thruster Battery & Charger
-LinkBehaviour_E5AEAEB2_F465_3F76_41E5_080EF0518215.source = #media-name=bd.2
-LinkBehaviour_E65D4E1E_F3FD_5D08_41D6_1F45BF2F48F8.source = #media-name=masterbdtech.2&focus-overlay-name=A/C Unit Fw. Cabin
-LinkBehaviour_E7191255_F3E1_491B_41EB_198294A6CFB2.source = #media-name=mainhall1.1
-LinkBehaviour_E71EA256_F3E1_4919_41DF_5C4AFC02C823.source = #media-name=mainhall1.1
-LinkBehaviour_E71EC256_F3E1_4919_41E0_945C35B80ABA.source = #media-name=pano1&focus-overlay-name=Anchor
-LinkBehaviour_E71EF256_F3E1_4919_41EE_0759469DE4D1.source = #media-name=maihall1.3
-LinkBehaviour_E762F0C5_F3C3_C578_41A2_0E97EB2FAE7D.source = #media-name=pano11.1&focus-overlay-name=tocard-mobile
-LinkBehaviour_EA9A722B_F3E1_490F_41B6_3D66161C378D.source = #media-name=mainhall.1
-LinkBehaviour_EC042908_F416_A0DB_41C6_197F0C2C44FB.source = #media-name=pano12
-LinkBehaviour_EC044908_F416_A0DB_41CB_1B168431F85E.source = #media-name=masterbd2tech.3&focus-overlay-name=Fuel Tank-Port
-LinkBehaviour_EC047908_F416_A0DB_41E8_3D59D155D3D4.source = #media-name=bdtech.2&focus-overlay-name=Fuel Tank-STB
-LinkBehaviour_EC04F908_F416_A0DB_41DB_06D0344A2947.source = #media-name=engineoutbase
-LinkBehaviour_EC058908_F416_A0DB_41D6_62D7FDF7E79E.source = #media-name=masterbd.1&focus-overlay-name=FWD SHOWER
-LinkBehaviour_EC059908_F416_A0DB_41DE_CAE907213F72.source = #media-name=mainhall2.1&focus-overlay-name=Engine Main Switch
-LinkBehaviour_EC05C908_F416_A0DB_41C8_4921169A14B1.source = #media-name=enginein2
-LinkBehaviour_ECC50C3B_F40A_A13D_41D9_65E81BABAB18.source = #media-name=prow.2&focus-overlay-name=Sail & Chain Locker
-LinkBehaviour_ECC51C3B_F40A_A13D_413F_26A689892068.source = #media-name=masterbd2.3&focus-overlay-name=Port Head
-LinkBehaviour_ECC52C3B_F40A_A13D_41EC_8C35A3F9BBB2.source = #media-name=mainhall.1.3
-LinkBehaviour_ECC53C3B_F40A_A13D_4135_545925673292.source = #media-name=engine4
-LinkBehaviour_ECC56C3B_F40A_A13D_41DE_96176A252D1D.source = #media-name=pano7.1
+LinkBehaviour_98E6F3BC_880F_0B91_41DA_43A2CBD9EF7A.source = UrlToReplace
+LinkBehaviour_E065273B_F40D_6F3C_41DB_C6EA3FCCCCB1.source = UrlToReplace
+LinkBehaviour_E065373B_F40D_6F3C_41E5_8525842C9F53.source = UrlToReplace
+LinkBehaviour_E065E73B_F40D_6F3C_41E6_424A75DD200E.source = UrlToReplace
+LinkBehaviour_E1D484FD_F461_4527_41E6_1A77FA1133E8.source = UrlToReplace
+LinkBehaviour_E1D4B4FD_F461_4527_41CC_DB8E08DC77A9.source = UrlToReplace
+LinkBehaviour_E1D4D4FD_F461_4527_41EA_C9E8DC3D74C4.source = UrlToReplace
+LinkBehaviour_E1D564FD_F461_4527_41D0_0C98E9C62E64.source = UrlToReplace
+LinkBehaviour_E1D574FD_F461_4527_41E1_9513ACDF4583.source = UrlToReplace
+LinkBehaviour_E20F8C5C_F4A1_4566_41EA_E598DD1DABA6.source = UrlToReplace
+LinkBehaviour_E20F9C5D_F4A1_4566_41E8_4C80F0A2B449.source = UrlToReplace
+LinkBehaviour_E3D11B14_F421_5F18_41E4_BA4610B9C355.source = UrlToReplace
+LinkBehaviour_E3D12B14_F421_5F18_41DB_CFC09E603BAB.source = UrlToReplace
+LinkBehaviour_E3D14B14_F421_5F18_41C6_DDACF82AB832.source = UrlToReplace
+LinkBehaviour_E3D25B14_F421_5F18_4180_73A8B21A04BE.source = UrlToReplace
+LinkBehaviour_E3D29B14_F421_5F18_41E9_B4FF242614F6.source = UrlToReplace
+LinkBehaviour_E3D2AB14_F421_5F18_41E3_B3891776E912.source = UrlToReplace
+LinkBehaviour_E3D2FB14_F421_5F18_41B3_7455DFDC9133.source = UrlToReplace
+LinkBehaviour_E5AEAEB2_F465_3F76_41E5_080EF0518215.source = UrlToReplace
+LinkBehaviour_E65D4E1E_F3FD_5D08_41D6_1F45BF2F48F8.source = UrlToReplace
+LinkBehaviour_E7191255_F3E1_491B_41EB_198294A6CFB2.source = UrlToReplace
+LinkBehaviour_E71EA256_F3E1_4919_41DF_5C4AFC02C823.source = UrlToReplace
+LinkBehaviour_E71EC256_F3E1_4919_41E0_945C35B80ABA.source = UrlToReplace
+LinkBehaviour_E71EF256_F3E1_4919_41EE_0759469DE4D1.source = UrlToReplace
+LinkBehaviour_E762F0C5_F3C3_C578_41A2_0E97EB2FAE7D.source = UrlToReplace
+LinkBehaviour_EA9A722B_F3E1_490F_41B6_3D66161C378D.source = UrlToReplace
+LinkBehaviour_EC042908_F416_A0DB_41C6_197F0C2C44FB.source = UrlToReplace
+LinkBehaviour_EC044908_F416_A0DB_41CB_1B168431F85E.source = UrlToReplace
+LinkBehaviour_EC047908_F416_A0DB_41E8_3D59D155D3D4.source = UrlToReplace
+LinkBehaviour_EC04F908_F416_A0DB_41DB_06D0344A2947.source = UrlToReplace
+LinkBehaviour_EC058908_F416_A0DB_41D6_62D7FDF7E79E.source = UrlToReplace
+LinkBehaviour_EC059908_F416_A0DB_41DE_CAE907213F72.source = UrlToReplace
+LinkBehaviour_EC05C908_F416_A0DB_41C8_4921169A14B1.source = UrlToReplace
+LinkBehaviour_ECC50C3B_F40A_A13D_41D9_65E81BABAB18.source = UrlToReplace
+LinkBehaviour_ECC51C3B_F40A_A13D_413F_26A689892068.source = UrlToReplace
+LinkBehaviour_ECC52C3B_F40A_A13D_41EC_8C35A3F9BBB2.source = UrlToReplace
+LinkBehaviour_ECC53C3B_F40A_A13D_4135_545925673292.source = UrlToReplace
+LinkBehaviour_ECC56C3B_F40A_A13D_41DE_96176A252D1D.source = UrlToReplace
 PopupWebFrameBehaviour_00E35A31_2C83_014C_41C4_48C94FF489C4.url = https://www.onsight.tech/virtual-tours/BC-Draft/cardtemp/volvo/um/Volvo-penta-D2-75_UM.pdf
 PopupWebFrameBehaviour_00ECBA38_2C83_01BC_41B9_584F1B4A70F6.url = //www.youtube.com/embed/z9fT9JRo60Y?v=z9fT9JRo60Y
 PopupWebFrameBehaviour_00EDBA32_2C83_014C_41BA_9ABA9D2E76DC.url = https://www.onsight.tech/virtual-tours/BC-Draft/cardtemp/volvo/checklist/Volvo-penta-D2-75_Chek-List.pdf
