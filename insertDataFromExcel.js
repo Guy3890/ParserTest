@@ -2,7 +2,7 @@ const fs = require("fs");
 const beautify = require('js-beautify').js;
 const excelToJson = require('convert-excel-to-json');
 
-let cardsData = getCardsDataFromExcelFile('test.xlsx');
+let excelData = getDataFromExcelFile('test.xlsx');
 let scriptFileContent = getScriptFileContent('script_mobile.js');
 let objectD
 parseSuccesfull = false;
@@ -18,41 +18,62 @@ for (let i = 0; i < lettersArray.length; i++) {
 let enFileContent = fs.readFileSync('en.txt');
 let enFileAsArray = enFileContent.toString().split(/\n/);
 
+let cardsData = excelData[Object.keys(excelData)[0]];
 cardsData.forEach(card => {
-  let children = getCardChildren(card.cardName);
+  let children = getCardChildren('/' + card.cardName);
+  // console.log(card.cardName);
+  // children.forEach(item => {
+  //   console.log(item);
+  // });
   updateChildrenInEnFile(card, children);
+});
+
+
+let searchData = excelData[Object.keys(excelData)[1]];
+searchData.forEach(item => {
+  let searchObject = getObjectByName(item.number);
+  if (searchObject != null) {
+    replaceTextInEnFile(searchObject.id + '.label', 'TextToReplace', item.name);
+
+    let clickItemId = searchObject.click.substring(searchObject.click.indexOf('LinkBehaviour'), searchObject.click.indexOf('.source'));
+    replaceTextInEnFile(clickItemId + '.source', 'UrlToReplace', item.link);
+  }  
 });
 
 updateEnFile('newEn.txt');
 updateScript_mobileFile('newScript_mobile.js');
 
-function getCardsDataFromExcelFile(filePath) {
-  let cardsData = excelToJson({
+function getDataFromExcelFile(filePath) {
+  let excelData = excelToJson({
     sourceFile: filePath,
-    name: 'Sheet1',
-    header: { rows: 1 },
-    columnToKey: {
-        A: "cardName",
-        B: "headerTitle",
-        C: "subTitle",
-        D: "youtubeLink",
-        E: "productLink",
-        F: "tsLink",
-        G: "dmLink",
-        H: "umLink",
-        I: "ckLink",
-        J: "photoLink"
+    sheets: [{
+      name: 'Sheet1',
+      header: { rows: 1 },
+      columnToKey: {
+          A: "cardName",
+          B: "headerTitle",
+          C: "subTitle",
+          D: "youtubeLink",
+          E: "productLink",
+          F: "tsLink",
+          G: "dmLink",
+          H: "umLink",
+          I: "ckLink",
+          J: "photoLink"
+      }
     },
-    name: 'Sheet2',
-    header:{ rows: 1},
-    columnToKey: {
-      A: "List",
-      B: "Name",
-      C: "Link"
-    }
+    {
+      name: 'Sheet2',
+      header:{ rows: 1},
+      columnToKey: {
+        A: "number",
+        B: "name",
+        C: "link"
+      }
+    }]    
   })
 
-  return cardsData[Object.keys(cardsData)[0]];
+  return excelData;
 }
 
 function getScriptFileContent(filePath) {
@@ -109,12 +130,23 @@ function parseFileContentToObject(fileContent, objectLetter) {
 function getCardChildren(cardName) {
   let children;
   objectD.definitions.forEach(card => {
-    if (card.data != undefined && card.data.name == '/' + cardName)
+    if (card.data != undefined && card.data.name != undefined && card.data.name == cardName)
     {
       children = card.children;  
     }
   });  
   return children;
+}
+
+function getObjectByName(itemName) {
+  let object;
+  objectD.definitions.forEach(item => {
+    if (item.data != undefined && item.data.name != undefined && item.data.name == itemName)
+    {
+      object = item;  
+    }
+  });  
+  return object;
 }
 
 function getChildObject(childId) {
@@ -169,19 +201,22 @@ function updateChildrenInEnFile(card, children) {
       let iconButtonId = getIconButtonId(childId, 'PopupWebFrameBehaviour');
       if (iconButtonId != '')
       {
-        if (card.youtubeLink != undefined) {
-          replaceTextInEnFile(iconButtonId, 'Youtube', card.youtubeLink);
-        } 
-        
+        // if (card.youtubeLink != undefined) {
+          
+        // } 
+        replaceTextInEnFile(iconButtonId, 'Youtube', card.youtubeLink);        
         replaceTextInEnFile(iconButtonId, 'Ts', card.tsLink);
         replaceTextInEnFile(iconButtonId, 'Dm', card.dmLink);
         replaceTextInEnFile(iconButtonId, 'Um', card.umLink);
         replaceTextInEnFile(iconButtonId, 'Ck', card.ckLink);
         replaceTextInEnFile(iconButtonId, 'Pic', card.photoLink);
       }  
+      // else {
+      //   changeVisibilty(childId, 'video-grey');
+      // } 
     }
     
-    if (childId.includes("Image_"))
+    if (childId.includes("IconButton_"))
     {
       if (card.youtubeLink == undefined) {
         changeVisibilty(childId, 'video-grey');
@@ -215,20 +250,20 @@ function changeVisibilty(childId, imageName) {
       childIndex = scriptFileContent.indexOf(childId);
     }
     visibleIndex = scriptFileContent.indexOf('"visible"', childIndex);
-    scriptFileContent = replaceAt(visibleIndex, '"visible": true,');          
+    scriptFileContent = replaceAt(visibleIndex, '"visible":true ');          
   }
 }
 
 function replaceAt(index, replacement) {
   let substring = scriptFileContent.substring(index - 50, index + 50);
-  console.log(substring);
+  // console.log(substring);
   return scriptFileContent.substring(0, index) + replacement + scriptFileContent.substring(index + replacement.length);
 }
 
 
 function getIconButtonId(childId, prefixIndication) {
   let childObject = getChildObject(childId);
-  if (childObject.click != undefined)
+  if (childObject != undefined && childObject.click != undefined)
   {
     let clickString = childObject.click;
     let imageButtonId = clickString.substring(clickString.indexOf(prefixIndication), clickString.indexOf('));') - 1);
@@ -266,4 +301,4 @@ function updateScript_mobileFile(filePath) {
   });
 }
 
-console.log('End');
+console.log('Done.');
