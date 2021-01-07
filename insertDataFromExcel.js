@@ -2,7 +2,7 @@ const fs = require("fs");
 const beautify = require('js-beautify').js;
 const excelToJson = require('convert-excel-to-json');
 
-let excelData = getDataFromExcelFile('test.xlsx');
+let excelData = getDataFromExcelFile('test .xlsx');
 let scriptFileContent = getScriptFileContent('script_mobile.js');
 let objectD
 parseSuccesfull = false;
