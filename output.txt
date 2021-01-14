@@ -1,0 +1,42 @@
+<a href="#media-name=masterbdtech.2&focus-overlay-name=A/C Panel Fwd.Cabin"onclick="myFunction()">A/C Panel Fwd.Cabin</a>
+<a href="#media-name=pano11.1&focus-overlay-name=tocard-mobile"onclick="myFunction()">A/C Panel Saloon</a>
+<a href="#media-name=masterbdtech.2&focus-overlay-name=A/C Unit Fw. Cabin"onclick="myFunction()">A/C Unit Fw. Cabin</a>
+<a href="#media-index=maihall1.3&trigger-overlay-name=maihall1.3"onclick="myFunction()">A/C Unit Saloon</a>
+<a href="#media-index=mainhall1.1&trigger-overlay-name=mainhall1.1"onclick="myFunction()">A/C water pump inlet + Stainer</a>
+<a href="#media-name=pano1&focus-overlay-name=Anchor"onclick="myFunction()">Anchor</a>
+<a href="#media-index=&trigger-overlay-name="onclick="myFunction()">Auto Pilot Motor</a>
+<a href="#media-index=mainhall.1&trigger-overlay-name=mainhall.1"onclick="myFunction()">Batteries Charger & Main Breker locker</a>
+<a href="#media-index=pano7.1.1&trigger-overlay-name=pano7.1.1"onclick="myFunction()">BBQ</a>
+<a href="#media-index=mainhall1.1&trigger-overlay-name=mainhall1.1"onclick="myFunction()">Bilge & A/C pump</a>
+<a href="#media-name=prow.4&focus-overlay-name=Bow Thruster"onclick="myFunction()">Bow Thruster</a>
+<a href="#media-name=masterbdtech.2&focus-overlay-name=Bow Thruster Battery & Charger"onclick="myFunction()">Bow Thruster Battery & Charger</a>
+<a href="#media-name=radio&focus-overlay-name=Chart Table"onclick="myFunction()">Chart Table</a>
+<a href="#media-name=pano4&focus-overlay-name=Coachroof rope clutch"onclick="myFunction()">Coachroof rope clutch</a>
+<a href="#media-index=radio&trigger-overlay-name=radio"onclick="myFunction()">DC & AC Panel</a>
+<a href="#media-name=mainhall.engine&focus-overlay-name=mainhall.engine"onclick="myFunction()">Engine</a>
+<a href="#media-name=mainhall.1.5&focus-overlay-name=Engine Main Switch"onclick="myFunction()">Engine Main Switch</a>
+<a href="#media-index=mainhall.1.4&trigger-overlay-name=mainhall.1.4"onclick="myFunction()">Freezer</a>
+<a href="#media-index=mainhall1.2&trigger-overlay-name=mainhall1.2"onclick="myFunction()">Fresh Water Manifold & Pump</a>
+<a href="#media-index=masterbdtech.2&trigger-overlay-name=masterbdtech.2"onclick="myFunction()">Fresh Water Tank Fw</a>
+<a href="#media-name=mainhall2.1&focus-overlay-name=Engine Main Switch"onclick="myFunction()">Fresh Water Tank STB.</a>
+<a href="#media-name=masterbd2tech.3&focus-overlay-name=Fuel Tank-Port"onclick="myFunction()">Fuel Tank-Port</a>
+<a href="#media-name=bdtech.2&focus-overlay-name=Fuel Tank-STB"onclick="myFunction()">Fuel Tank-STB</a>
+<a href="#media-index=masterbd&trigger-overlay-name=masterbd"onclick="myFunction()">FWD Cabin</a>
+<a href="#media-index=&trigger-overlay-name="onclick="myFunction()">FWD HEAD</a>
+<a href="#media-name=masterbd.1&focus-overlay-name=FWD SHOWER"onclick="myFunction()">FWD SHOWER</a>
+<a href="#media-index=pano12&trigger-overlay-name=pano12"onclick="myFunction()">Galley</a>
+<a href="#media-index=engineoutbase&trigger-overlay-name=engineoutbase"onclick="myFunction()">GEN LAZARET</a>
+<a href="#media-index=enginein2&trigger-overlay-name=enginein2"onclick="myFunction()">Generator</a>
+<a href="#media-name=pano7.1&trigger-overlay-name=pano7.1"onclick="myFunction()">Helm & Control Station</a>
+<a href="#media-name=prow.2&focus-overlay-name=Jib Roller Deck"onclick="myFunction()">Jib Roller Deck</a>
+<a href="#media-index=engine4&trigger-overlay-name=engine4"onclick="myFunction()">Pasarela Hudraulic & Motor Unit</a>
+<a href="#media-name=masterbd2.3&focus-overlay-name=Port Head"onclick="myFunction()">PORT HEAD</a>
+<a href="#media-name=prow.2&focus-overlay-name=Sail & Chain Locker"onclick="myFunction()">Sail & Chain Locker</a>
+<a href="#media-index=mainhall.1.3&trigger-overlay-name=mainhall.1.3"onclick="myFunction()">Services Battery</a>
+<a href="#media-index=bd.2&trigger-overlay-name=bd.2"onclick="myFunction()">STB HEAD</a>
+<a href="#media-name=bdtch.1&focus-overlay-name=Termal Switch winch&Gangway"onclick="myFunction()">Termal Switch winch&Gangway</a>
+<a href="#media-index=&trigger-overlay-name="onclick="myFunction()">Toilet Locker Fwd</a>
+<a href="#media-index=&trigger-overlay-name="onclick="myFunction()">Toilet Locker Port Aft</a>
+<a href="#media-index=bdtech.3&trigger-overlay-name=bdtech.3"onclick="myFunction()">Toilet Locker STB. Aft</a>
+<a href="#medi-name=mainhall.1.2&focus-overlay-name=Winch Elctric Switch"onclick="myFunction()">Winch Elctric Switch</a>
+<a href="#media-name=prow.2&focus-overlay-name=Jib Roller Deck"onclick="myFunction()">Windless Motor &Gear</a>

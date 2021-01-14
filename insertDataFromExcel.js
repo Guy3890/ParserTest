@@ -1,47 +1,103 @@
 const fs = require("fs");
 const beautify = require('js-beautify').js;
 const excelToJson = require('convert-excel-to-json');
+const xlsxFile = require('xlsx');
 
-let excelData = getDataFromExcelFile('test .xlsx');
-let scriptFileContent = getScriptFileContent('script_mobile.js');
-let objectD
-parseSuccesfull = false;
-const lettersArray = ['a', 'b', 'c', 'd'];
-for (let i = 0; i < lettersArray.length; i++) {
-  try {
-    objectD = parseFileContentToObject(scriptFileContent, lettersArray[i]);
-    break;
-  } catch {
+const express = require('express');
+const app = express();
+const multer = require('multer');
+const cors = require('cors');
+
+app.use(cors())
+
+const storage = multer.diskStorage({
+    destination: function(req, file, cb) {
+        cb(null, 'upload')
+    },
+    filename: function(req, file, cb) {
+        cb(null, file.originalname )
+    }
+})
+
+const upload = multer({ storage: storage}).array('file')
+
+app.post('/upload', function(req, res) {
+    upload(req, res, function (err) {
+        if (err instanceof multer.MulterError) {
+            return res.status(500).json(err)
+        } else if (err) {
+            return res.status(500).json(err)
+        }
+        modifyBootClickFiles('./upload/' + req.files[0].filename);
+        return res.status(200);
+    })
+});
+
+// app.listen(process.env.PORT);
+app.listen(3001, () => {
+    console.log(`Server listening at http://localhost:3001`)
+  })
+
+function modifyBootClickFiles(filePath) {
+  let excelData = getDataFromExcelFile(filePath);
+  let scriptFileContent = getScriptFileContent('script_mobile.js');
+  let objectD
+  parseSuccesfull = false;
+  const lettersArray = ['a', 'b', 'c', 'd'];
+  for (let i = 0; i < lettersArray.length; i++) {
+    try {
+      objectD = parseFileContentToObject(scriptFileContent, lettersArray[i]);
+      break;
+    } catch {
+    }
   }
+  
+  let enFileContent = fs.readFileSync('en.txt');
+  let enFileAsArray = enFileContent.toString().split(/\n/);
+
+  let cardsData = excelData[Object.keys(excelData)[0]];
+  cardsData.forEach(card => {
+    let children = getCardChildren('/' + card.cardName);
+    // console.log(card.cardName);
+    // children.forEach(item => {
+    //   console.log(item);
+    // });
+    updateChildrenInEnFile(card, children);
+  });
+
+
+  let searchData = excelData[Object.keys(excelData)[1]];
+  searchData.forEach(item => {
+    let searchObject = getObjectByName(item.number);
+    if (searchObject != null) {
+      replaceTextInEnFile(searchObject.id + '.label', 'TextToReplace', item.name);
+
+      let clickItemId = searchObject.click.substring(searchObject.click.indexOf('LinkBehaviour'), searchObject.click.indexOf('.source'));
+      replaceTextInEnFile(clickItemId + '.source', 'UrlToReplace', item.link);
+    }  
+  });
+
+  updateEnFile('en.txt');
+  updateScript_mobileFile('Script_mobile.js');
+  updateOutputFile('test.xlsx');
 }
- 
-let enFileContent = fs.readFileSync('en.txt');
-let enFileAsArray = enFileContent.toString().split(/\n/);
 
-let cardsData = excelData[Object.keys(excelData)[0]];
-cardsData.forEach(card => {
-  let children = getCardChildren('/' + card.cardName);
-  // console.log(card.cardName);
-  // children.forEach(item => {
-  //   console.log(item);
-  // });
-  updateChildrenInEnFile(card, children);
-});
+function updateOutputFile(filePath) {
+  const workBook = xlsxFile.readFile(filePath);
+  const workSheet = workBook.Sheets["Sheet2"];
+  const data = xlsxFile.utils.sheet_to_json(workSheet);
 
+  let outputFileContent = '';
+  const newData = data.map(function newWb (line) {
+    line1 = line.Name;
+    line2 = line.Link;
+    outputFileContent += `<a href="${line2}"onclick="myFunction()">${line1}</a>` + '\n';
+ });
 
-let searchData = excelData[Object.keys(excelData)[1]];
-searchData.forEach(item => {
-  let searchObject = getObjectByName(item.number);
-  if (searchObject != null) {
-    replaceTextInEnFile(searchObject.id + '.label', 'TextToReplace', item.name);
-
-    let clickItemId = searchObject.click.substring(searchObject.click.indexOf('LinkBehaviour'), searchObject.click.indexOf('.source'));
-    replaceTextInEnFile(clickItemId + '.source', 'UrlToReplace', item.link);
-  }  
-});
-
-updateEnFile('newEn.txt');
-updateScript_mobileFile('newScript_mobile.js');
+  fs.writeFileSync('output.txt', outputFileContent, function (err) {
+    if (err) throw err;
+  });
+}
 
 function getDataFromExcelFile(filePath) {
   let excelData = excelToJson({
@@ -300,5 +356,3 @@ function updateScript_mobileFile(filePath) {
     if (err) throw err;
   });
 }
-
-console.log('Done.');
