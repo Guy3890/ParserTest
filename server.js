@@ -28,7 +28,7 @@ app.post('/upload', function(req, res) {
         } else if (err) {
             return res.status(500).json(err)
         }
-        modifyBootClickFiles('./upload/' + req.files[0].filename);
+        modifyBoatClickFiles('./upload/' + req.files[0].filename);
         return res.status(200);
     })
 });
@@ -38,7 +38,7 @@ app.listen(3001, () => {
     console.log(`Server listening at http://localhost:3001`)
   })
 
-function modifyBootClickFiles(filePath) {
+function modifyBoatClickFiles(filePath) {
   let excelData = getDataFromExcelFile(filePath);
   let scriptFileContent = getScriptFileContent('script_mobile.js');
   let objectD
