@@ -2630,7 +2630,7 @@
         "toolTipHorizontalAlign": "center",
         "borderRadius": 0
     }, {
-        "visible": false,
+        "visible": true,
         "id": "IconButton_9B4AF2F9_8F3F_2495_41A7_7584EB610B00",
         "left": "35%",
         "verticalAlign": "middle",
@@ -4952,7 +4952,7 @@
         "toolTipHorizontalAlign": "center",
         "borderRadius": 0
     }, {
-        "visible": false,
+        "visible": true,
         "id": "IconButton_9B416FA7_8F38_FCBD_41DF_E3347DB8878E",
         "shadow": false,
         "verticalAlign": "middle",
@@ -5152,7 +5152,7 @@
         "class": "FadeInEffect",
         "easing": "linear"
     }, {
-        "visible": false,
+        "visible": true,
         "id": "Image_9B5EEF9E_8F38_FC8F_41CD_8558579B27AC_mobile",
         "left": 31.9,
         "verticalAlign": "middle",
@@ -6545,7 +6545,7 @@
         "id": "panorama_A59903BF_AF36_DB73_41DB_5929840E3CB3_camera",
         "initialSequence": "this.sequence_A5E745D1_AF36_DF0F_41DB_8DEAFAD60C76"
     }, {
-        "visible": false,
+        "visible": true,
         "id": "IconButton_9B4B42FA_8F3F_2497_41A5_B752F904F048",
         "shadow": false,
         "verticalAlign": "middle",
@@ -8833,7 +8833,7 @@
         "toolTipHorizontalAlign": "center",
         "borderRadius": 0
     }, {
-        "visible": false,
+        "visible": true,
         "id": "IconButton_9B5D8626_8F38_EFBC_41D6_5FE03F26BC63",
         "shadow": false,
         "verticalAlign": "middle",
@@ -10752,7 +10752,7 @@
         "toolTipHorizontalAlign": "center",
         "borderRadius": 0
     }, {
-        "visible": false,
+        "visible": true,
         "id": "IconButton_9B41DFA6_8F38_FCBF_41C4_3CDF104B33D4",
         "left": "35%",
         "verticalAlign": "middle",
@@ -14604,7 +14604,7 @@
         "class": "FadeOutEffect",
         "easing": "linear"
     }, {
-        "visible": false,
+        "visible": true,
         "id": "IconButton_9B4AC2F9_8F3F_2495_416E_87658F3D4DDC",
         "shadow": false,
         "verticalAlign": "middle",
@@ -19226,7 +19226,7 @@
         "toolTipHorizontalAlign": "center",
         "borderRadius": 0
     }, {
-        "visible": false,
+        "visible": true,
         "contentOpaque": false,
         "scrollBarOpacity": 0.5,
         "id": "Container_5F6D4898_45FC_3B04_41C7_861D655A1182",
@@ -21012,7 +21012,7 @@
         "class": "FadeInEffect",
         "easing": "linear"
     }, {
-        "visible": false,
+        "visible": true,
         "id": "IconButton_9B4BAE6F_8F38_DF8C_41DA_E65011EC26B7",
         "shadow": false,
         "verticalAlign": "middle",
@@ -23952,7 +23952,7 @@
             "class": "CubicPanoramaFrame"
         }]
     }, {
-        "visible": false,
+        "visible": true,
         "id": "Image_9B411E66_8F38_DFBC_419F_6FA8037EE526_mobile",
         "left": 31.9,
         "verticalAlign": "middle",
