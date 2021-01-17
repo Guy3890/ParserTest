@@ -28,17 +28,26 @@ app.post('/upload', function(req, res) {
         } else if (err) {
             return res.status(500).json(err)
         }
-        modifyBoatClickFiles('upload/' + req.files[0].filename);
+        req.files.forEach(file => {
+          if (file.filename.split('.').pop() === 'xlsx') {
+            modifyBoatClickFiles('upload/' + file.filename);
+          }
+        });
+        // modifyBoatClickFiles('upload/' + req.files[0].filename);
         return res.status(200);
     })
 });
 
-
+let objectD;
+let enFileContent;
+let enFileAsArray;
+let scriptFileContent;  
 
 function modifyBoatClickFiles(filePath) {
-  let excelData = getDataFromExcelFile(filePath);
-  let scriptFileContent = getScriptFileContent('upload/script_mobile.js');
-  let objectD
+  enFileContent = fs.readFileSync('upload/en.txt');
+  enFileAsArray = enFileContent.toString().split(/\n/);
+  scriptFileContent = getScriptFileContent('upload/script_mobile.js');  
+  let excelData = getDataFromExcelFile(filePath);  
   parseSuccesfull = false;
   const lettersArray = ['a', 'b', 'c', 'd'];
   for (let i = 0; i < lettersArray.length; i++) {
@@ -49,9 +58,6 @@ function modifyBoatClickFiles(filePath) {
     }
   }
   
-  let enFileContent = fs.readFileSync('upload/en.txt');
-  let enFileAsArray = enFileContent.toString().split(/\n/);
-
   let cardsData = excelData[Object.keys(excelData)[0]];
   cardsData.forEach(card => {
     let children = getCardChildren('/' + card.cardName);
@@ -134,9 +140,9 @@ function getScriptFileContent(filePath) {
 }
 
 function parseFileContentToObject(fileContent, objectLetter) {
-  let string = 'var ' + objectLetter + ' = {';
-  let string2 = 'if (' + objectLetter + "['data'] == undefined)";
-  const substring = fileContent.substring(fileContent.indexOf('var ' + objectLetter + ' = {') + 8, fileContent.lastIndexOf('if (' + objectLetter + "['data'] == undefined)") - 7);  
+  let startOfObject = 'var ' + objectLetter + ' = {';
+  let endOfObject = 'if (' + objectLetter + "['data'] == undefined)";
+  const substring = fileContent.substring(fileContent.indexOf(startOfObject) + 8, fileContent.lastIndexOf(endOfObject) - 6);  
   let beautifyContent = beautify(substring, { indent_size: 4, space_in_empty_paren: true });
 
   let trimmedContent = ""; 
@@ -340,7 +346,7 @@ function getLinkId(childId, prefixIndication) {
 function updateEnFile(filePath) {
   let updatedEnFileContent;
   enFileAsArray.forEach(line => {
-    updatedEnFileContent += line;
+    updatedEnFileContent += line + '\n';
   });
 
   fs.writeFileSync(filePath, updatedEnFileContent, function (err) {
