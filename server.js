@@ -28,19 +28,16 @@ app.post('/upload', function(req, res) {
         } else if (err) {
             return res.status(500).json(err)
         }
-        modifyBoatClickFiles('./upload/' + req.files[0].filename);
+        modifyBoatClickFiles('upload/' + req.files[0].filename);
         return res.status(200);
     })
 });
 
-// app.listen(process.env.PORT);
-app.listen(3001, () => {
-    console.log(`Server listening at http://localhost:3001`)
-  })
+
 
 function modifyBoatClickFiles(filePath) {
   let excelData = getDataFromExcelFile(filePath);
-  let scriptFileContent = getScriptFileContent('script_mobile.js');
+  let scriptFileContent = getScriptFileContent('upload/script_mobile.js');
   let objectD
   parseSuccesfull = false;
   const lettersArray = ['a', 'b', 'c', 'd'];
@@ -52,7 +49,7 @@ function modifyBoatClickFiles(filePath) {
     }
   }
   
-  let enFileContent = fs.readFileSync('en.txt');
+  let enFileContent = fs.readFileSync('upload/en.txt');
   let enFileAsArray = enFileContent.toString().split(/\n/);
 
   let cardsData = excelData[Object.keys(excelData)[0]];
@@ -77,9 +74,9 @@ function modifyBoatClickFiles(filePath) {
     }  
   });
 
-  updateEnFile('en.txt');
-  updateScript_mobileFile('Script_mobile.js');
-  updateOutputFile('test.xlsx');
+  updateEnFile('upload/en.txt');
+  updateScript_mobileFile('upload/script_mobile.js');
+  updateOutputFile('upload/test.xlsx');
 }
 
 function updateOutputFile(filePath) {
@@ -356,3 +353,8 @@ function updateScript_mobileFile(filePath) {
     if (err) throw err;
   });
 }
+
+// app.listen(process.env.PORT);
+app.listen(3001, () => {
+  console.log(`Server listening at http://localhost:3001`)
+})
