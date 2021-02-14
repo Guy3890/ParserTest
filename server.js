@@ -255,9 +255,9 @@ function updateChildrenInEnFile(card, children) {
       return; 
     }
 
-    if (childId.includes("IconButton_"))
+    if (childId.includes("Image_"))
     {
-      let iconButtonId = getIconButtonId(childId, 'PopupWebFrameBehaviour');
+      let iconButtonId = getIconButtonId(childId, 'PopupWebFrameBehaviour_A');
       if (iconButtonId != '')
       {
         // if (card.youtubeLink != undefined) {
